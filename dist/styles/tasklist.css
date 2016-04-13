@@ -1,0 +1,49 @@
+.tasklist-framework {
+    width: 500px;
+    height: 600px;
+    margin: 10% auto 0 auto;
+    font-family: Raleway, sans-serif;
+    font-weight: 200;
+    color: #4e4e50;
+}
+
+a {
+    text-decoration: underline;
+}
+
+a:hover {
+    color: #9fa8a3;
+    cursor: pointer;
+}
+
+.tasklist-nav {
+    margin-bottom: 5px;
+    list-style-type: none;
+    text-align: right;
+}
+
+.tasklist-nav li {
+    display: inline;
+    margin-left: 10px;
+
+}
+
+.tasklist-view {
+    background-color: #c5d5cb;
+    height: 100%;
+}
+
+.tasklist-view h1 {
+    margin: 0px;
+    padding: 10px 25px;
+    background-color: #e3e0cf;
+    line-height: 4rem;
+}
+
+.tasklist-item {
+    padding: 10px 25px;
+    margin: 0;
+    line-height: 4rem;
+    border-bottom: thin solid #e3e0cf;
+    list-style-type: none;
+}

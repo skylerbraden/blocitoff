@@ -1,0 +1,14 @@
+<section class="tasklist-framework">
+    <ul class="tasklist-nav">
+        <li><a herf="#">Task history</a></li>
+        <li><a herf="#">Active tasks</a></li>
+    </ul>
+    <div class="tasklist-view">
+        <h1>Current tasks</h1>
+        <ul class="tasklist-item">
+        <li ng-repeat="task in tasklist.tasks">{{tasks.task}}
+            <input type="text" ng-model="tasklist.task" name="tasklist" placeholder=""/>
+        </li>
+        </ul>
+    </div>
+</section>
