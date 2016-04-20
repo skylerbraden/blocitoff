@@ -70,8 +70,7 @@ a:hover {
     outline: none;
 }
 
-.remove-task {
+.complete-task {
     float: right;
-    vertical-align: middle;
-    
+    margin-right: 25px;
 }
