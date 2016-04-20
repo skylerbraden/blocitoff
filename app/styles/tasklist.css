@@ -66,6 +66,12 @@ a:hover {
     background-color: transparent;
     border: none;
     height: 100%;
-    width: 100%;
+/*    width: 100%;*/
     outline: none;
+}
+
+.remove-task {
+    float: right;
+    vertical-align: middle;
+    
 }

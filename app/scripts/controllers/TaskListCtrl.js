@@ -17,6 +17,10 @@
             vm.task = "";
         }
         
+        vm.removeTask = function(task) {
+            task.completed = true;
+        }
+        
 //        window.foo = vm.tasks
         
     }
