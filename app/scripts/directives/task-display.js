@@ -10,25 +10,23 @@
              },
 	         link: function(scope, element, attributes){
                  element.bind("click", function(){
-                     element.unbind("click")
-                     element.html("<input type='text' ng-model='text'/>")
+                     element.unbind("click");
+                     element.html("<input type='text' ng-model='task.text' autofocus/>");
                      
-                     element.bind("keyup", function(event){
-                         
-                         if(event.which == 13){
-                             scope.updateTask()
-                             element.html('<task-display task="task" list="list"></task-display>')
-                             $compile(element.contents())(scope)
+                     element.bind("keyup", function(event) {
+                         if(event.which == 13) {
+                             scope.updateTask();
+                             element.html('<task-display task="task" list="list"></task-display>');
+                             $compile(element.contents())(scope);
                          }
                         
-                     })
+                     });
                      
-                     $compile(element.contents())(scope)
-                 })
+                     $compile(element.contents())(scope);
+                 });
 	         },
-             controller: function($scope){
-                 $scope.updateTask = function(){
-                     $scope.task.text = $scope.text
+             controller: function($scope) {
+                 $scope.updateTask = function() {
                      $scope.list.$save($scope.task);
                  }
              }
