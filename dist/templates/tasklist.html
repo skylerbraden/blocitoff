@@ -9,7 +9,9 @@
             <li ng-repeat="task in tasklist.tasks">
                 <task-display task="task" list="tasklist.tasks"></task-display>
             </li>
+            <!--This <li> provides the input form, visually recognized by the placeholder text, "Task". When there are no tasks in tasklist, this is the only <li> that shows.-->
             <li>
+                <!--the ng-model directive binds the value of an input field to a variable created in AngularJS (e.g., in TaskListCtrl)-->
                 <input 
                        class="tasklist-text" 
                        type="text" 
@@ -17,8 +19,6 @@
                        name="Task" 
                        placeholder="Task"
                        ng-keyup="$event.keyCode == 13 && tasklist.addTask()"/>
-    <!--            <input ng-keyup="$event.keyCode == 13 && tasklist.addTask()" />-->
-    <!--            <input class="tasklist-submit" type="submit" value="" />-->
             </li>
         </ul>
     </div>
