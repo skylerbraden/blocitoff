@@ -1,12 +1,11 @@
 <section class="tasklist-framework">
-    <ul class="tasklist-nav">
-        <li><a herf="#">Task history</a></li>
-        <li><a herf="#">Active tasks</a></li>
+    <ul class="tasklist-nav noselect">
+        <li><a href="/history">Task history</a></li>
+        <li><a href="/">Active tasks</a></li>
     </ul>
     <div class="tasklist-view">
-        <h1>Current tasks</h1>
+        <h1 class="noselect">Current tasks</h1>
         <ul>
-            <!--This <li> provides the input form, visually recognized by the placeholder text, "Task". When there are no tasks in tasklist, this is the only <li> that shows.-->
             <li>
                 <!--the ng-model directive binds the value of an input field to a variable created in AngularJS (e.g., in TaskListCtrl)-->
                 <input 
@@ -17,10 +16,9 @@
                        placeholder="Add a new task"
                        ng-keyup="$event.keyCode == 13 && tasklist.addTask()"/>
             </li>            
-            <li ng-repeat="task in tasklist.tasks" ng-hide="task.completed">
+            <li ng-repeat="task in tasklist.tasks">
                 <task-display task="task" list="tasklist.tasks"></task-display>
-<!--                <a href="#" class="remove-task" ng-click="tasklist.removeTask(task)">X</a>-->
-                <input class="complete-task" type="checkbox" ng-click="tasklist.removeTask(task)"/>
+                <input class="complete-task" type="checkbox" ng-click="tasklist.completeTask(task)"/>
             </li>
 
 <!--

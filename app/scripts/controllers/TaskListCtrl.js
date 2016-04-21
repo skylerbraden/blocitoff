@@ -3,7 +3,9 @@
         
         var vm = this;
         var ref = new Firebase('https://blocitoff-sjb.firebaseio.com/users/1/tasks');
+		var ref2 = new Firebase('https://blocitoff-sjb.firebaseio.com/users/1/completed-tasks');
         vm.tasks = $firebaseArray(ref);
+		vm.completedTasks = $firebaseArray(ref2);
         
 
 //        vm.test = function(){
@@ -14,14 +16,17 @@
                                 
         vm.addTask = function() {
             vm.tasks.$add({text: vm.task});
+			vm.task.active;
             vm.task = "";
         }
         
-        vm.removeTask = function(task) {
+        vm.completeTask = function(task) {
+			vm.completedTasks.$add(task);
+			vm.tasks.$remove(task);
             task.completed = true;
         }
         
-//        window.foo = vm.tasks
+        window.foo = vm.tasks
         
     }
         
