@@ -1,0 +1,20 @@
+<section class="tasklist-framework">
+    <ul class="tasklist-nav noselect">
+        <li><a href="/history">Task history</a></li>
+        <li><a href="/">Active tasks</a></li>
+    </ul>
+    <div class="tasklist-view">
+        <h1 class="noselect">Task history</h1>
+        <ul>          
+            <li ng-repeat="task in tasklist.completedTasks">
+				<p>{{task.text}}</p>
+            </li>
+
+<!--
+            <li ng-repeat="task in tasklist.tasks">
+                {{ task.text }}
+            </li>
+-->
+        </ul>
+    </div>
+</section>

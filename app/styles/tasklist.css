@@ -45,6 +45,8 @@ a:hover {
 .tasklist-view {
     background-color: #c5d5cb;
     height: 100%;
+	overflow: hidden;
+	overflow-y: scroll;
 }
 
 .tasklist-view h1 {
@@ -67,6 +69,7 @@ a:hover {
     padding-left: 25px;
     list-style-type: none;
     border-bottom: thin solid #e3e0cf;
+	vertical-align: middle;
 }
 
 .tasklist-view ul li p {
