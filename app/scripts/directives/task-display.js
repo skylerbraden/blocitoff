@@ -16,7 +16,7 @@
                      element.bind("keyup", function(event) {
                          if(event.which == 13) {
                              scope.updateTask();
-                             element.html('<task-display task="task" list="list"></task-display>');
+                             element.html('<task-display task="taskarea" list="list"></task-display>');
                              $compile(element.contents())(scope);
                          }
                         

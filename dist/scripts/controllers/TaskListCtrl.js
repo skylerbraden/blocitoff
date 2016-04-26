@@ -15,7 +15,7 @@
                                     
                                 
         vm.addTask = function() {
-            vm.tasks.$add({text: vm.task});
+            vm.tasks.$add({text: vm.task, time: Firebase.ServerValue.TIMESTAMP});
 			vm.task.active;
             vm.task = "";
         }

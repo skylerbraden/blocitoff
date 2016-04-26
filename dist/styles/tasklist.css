@@ -76,18 +76,31 @@ a:hover {
     display: table-cell;
     vertical-align: middle;
     margin: 0;
+	padding: 5px 15px 5px 0;
 }
 
-.tasklist-view ul li input {
+.tasklist-text, p input {
     padding: 0;
     background-color: transparent;
     border: none;
     height: 100%;
-/*    width: 100%;*/
+    width: 100%;
     outline: none;
 }
 
 .complete-task {
     float: right;
     margin-right: 25px;
+	height: 100%;
+}
+
+.tasklist-view ul li .complete-date {
+	display: table-cell;
+	text-align: middle;
+	float: right;
+	margin-right: 25px;
+	padding: 0;
+	color: #AAAAAA;
+	font-size: 0.75rem;
+	font-weight: 600;
 }

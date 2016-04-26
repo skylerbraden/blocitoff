@@ -6,15 +6,12 @@
     <div class="tasklist-view">
         <h1 class="noselect">Task history</h1>
         <ul>          
-            <li ng-repeat="task in tasklist.completedTasks">
-				<p>{{task.text}}</p>
+            <li ng-repeat="task in tasklist.completedTasks | orderBy: 'time'">
+				<p style="color: #AAAAAA;">{{task.text}}</p>
+				<p class="complete-date">{{task.time | date : 'M'}}.{{task.time | date : 'd'}}</p>
             </li>
 
-<!--
-            <li ng-repeat="task in tasklist.tasks">
-                {{ task.text }}
-            </li>
--->
+
         </ul>
     </div>
 </section>
