@@ -95,8 +95,6 @@ a:hover {
 }
 
 .tasklist-view ul li .complete-date {
-	display: table-cell;
-	text-align: middle;
 	float: right;
 	margin-right: 25px;
 	padding: 0;

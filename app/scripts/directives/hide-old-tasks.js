@@ -4,7 +4,7 @@
 	         replace: true,
 	         restrict: 'A',
 	         link: function(scope, element, attributes){
-				 
+				 if()
 			 }
                  
 	     };
