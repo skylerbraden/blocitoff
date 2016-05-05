@@ -16,9 +16,9 @@
                        placeholder="Add a new task"
                        ng-keyup="$event.keyCode == 13 && tasklist.addTask()"/>
             </li>            
-            <li ng-repeat="task in tasklist.tasks | orderBy: 'time'">
+            <li ng-repeat="task in tasklist.tasks | orderBy: 'time'" ng-hide="tasklist.duration >= tasklist.FIVE_SECONDS">
                 <task-display task="task" list="tasklist.tasks"></task-display>
-                <input class="complete-task" type="checkbox" ng-click="tasklist.completeTask(task)"/>
+                <input class="complete-task" type="checkbox"/>
             </li>
 
 <!--
