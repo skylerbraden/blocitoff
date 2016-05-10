@@ -22,7 +22,7 @@
 //			console.log("Interval Happened")
 
 				$.each(vm.tasks, function(index, task){
-					if(task.time < (Date.now() - FIVE_SECONDS)){
+					if(task.time < (Date.now() - SEVEN_DAYS)){
 //						console.log("Expired")
 						vm.completeTask(task);
 					}

@@ -62,6 +62,7 @@ a:hover {
 }
 
 .tasklist-view ul li {
+	position: relative;
     display: table;
     box-sizing: border-box;
     width: 100%;
@@ -75,8 +76,10 @@ a:hover {
 .tasklist-view ul li p {
     display: table-cell;
     vertical-align: middle;
+/*
     margin: 0;
 	padding: 5px 15px 5px 0;
+*/
 }
 
 .tasklist-text, p input {
@@ -94,11 +97,22 @@ a:hover {
 	height: 100%;
 }
 
-.tasklist-view ul li .complete-date {
-	float: right;
-	margin-right: 25px;
-	padding: 0;
+.date-circle, .complete-circle {
+	position: absolute;
+	right: 25px;
+	top: 28%;
+	border-radius: 50%;
+    width: 30px;
+    height: 30px;
+    background: #e3e0cf;
+    color: #666;
+    text-align: center;
 	color: #AAAAAA;
-	font-size: 0.75rem;
-	font-weight: 600;
+	font-size: 0.65rem;
+	line-height: 1.8rem;
+}
+
+.complete-circle:hover {
+	color: #9fa8a3;
+    cursor: pointer;
 }

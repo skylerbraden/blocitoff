@@ -1,14 +1,16 @@
 <section class="tasklist-framework">
     <ul class="tasklist-nav noselect">
-        <li><a href="/history">Task history</a></li>
-        <li><a href="/">Active tasks</a></li>
+		<li><a href="/">Active tasks</a></li>
+		<li><a href="/history">Task history</a></li>
     </ul>
     <div class="tasklist-view">
         <h1 class="noselect">Task history</h1>
         <ul>          
             <li ng-repeat="task in tasklist.completedTasks | orderBy: 'time'">
 				<p style="color: #AAAAAA;">{{task.text}}</p>
-				<p class="complete-date">{{task.time | date : 'M'}}.{{task.time | date : 'd'}}</p>
+				<div class="date-circle">
+					{{task.time | date : 'M'}}.{{task.time | date : 'd'}}
+				</div>
             </li>
 
 

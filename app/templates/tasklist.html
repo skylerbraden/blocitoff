@@ -1,7 +1,7 @@
 <section class="tasklist-framework">
     <ul class="tasklist-nav noselect">
-        <li><a href="/history">Task history</a></li>
         <li><a href="/">Active tasks</a></li>
+		<li><a href="/history">Task history</a></li>
     </ul>
     <div class="tasklist-view">
         <h1 class="noselect">Current tasks</h1>
@@ -16,9 +16,10 @@
                        placeholder="Add a new task"
                        ng-keyup="$event.keyCode == 13 && tasklist.addTask()"/>
             </li>            
-            <li ng-repeat="task in tasklist.tasks | orderBy: 'time'" ng-hide="tasklist.duration >= tasklist.FIVE_SECONDS">
+            <li ng-repeat="task in tasklist.tasks | orderBy: 'time'">
                 <task-display task="task" list="tasklist.tasks"></task-display>
-                <input class="complete-task" type="checkbox"/>
+<!--                <input class="complete-task" type="checkbox" ng-click="tasklist.completeTask(task)"/>-->
+				<div class="complete-circle" ng-click="tasklist.completeTask(task)"></div>
             </li>
 
 <!--
